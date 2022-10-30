@@ -1,0 +1,72 @@
+public class Bootcamp {
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner (System.in);
+        //Creo un objeto de la clase persona con el constructor por defecto para luego modificarle los valores con los
+        //metodos get y set
+        Persona uno = new Persona();
+        
+        System.out.println("La persona uno tiene " + uno.getEdad() + " años, su nombre es " + uno.getNombre() + ", y su teléfono es " + uno.getTelefono());
+        
+        uno.setEdad(21);
+        uno.setNombre("Camila");
+        uno.setTelefono(777777777);
+        
+        System.out.println("La persona uno ahora tiene " + uno.getEdad() + "años, se llama " + uno.getNombre() + ", y su teléfono es " + uno.getTelefono());
+    }
+ //Creo la clase persona
+ 
+
+}
+
+class Persona{
+     private int edad;
+     private String nombre;
+     private int telefono;
+     
+     //Creo los Getters y Setters para cada propiedad
+
+        public int getEdad() {
+            return edad;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public int getTelefono() {
+            return telefono;
+        }
+
+        public void setEdad(int edad) {
+            this.edad = edad;
+        }
+
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+
+        public void setTelefono(int telefono) {
+            this.telefono = telefono;
+        }
+        
+        //Creo el constructor por defecto y el contructor por parametros
+
+        public Persona(int edad, String nombre, int telefono) {
+            this.edad = edad;
+            this.nombre = nombre;
+            this.telefono = telefono;
+        }
+        
+        public Persona (){
+            this.edad = 30;
+            this.nombre = "Juana";
+            this.telefono = 666666666;
+        }
+        
+     
+ }   
