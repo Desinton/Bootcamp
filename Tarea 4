@@ -1,0 +1,93 @@
+public class Bootcamp {
+   
+    public static void main(String[] args) {
+        //Creo un objeto cliente dandole valor a las variables y lo muestro por pantalla
+       Cliente cliente = new Cliente(10000,45,"Jose Miguel",555444333);
+       System.out.println("Nuestro cliente se llama " + cliente.getNombre() + " y tiene " + cliente.getEdad() 
+               + " años. Tiene de credito " + cliente.getCredito() + "€ y su número de telefono es " +  cliente.getTelefono());
+       
+       //Creo un objeto trabajador dandole valor a las variables y lo muestro por pantalla
+       Trabajador trabajador = new Trabajador (2500,32,"María",999666333);
+       System.out.println("Nuestro trabajador se llama " + trabajador.getNombre() + " y tiene " + trabajador.getEdad()
+               + " años. Su salario es de " + trabajador.getSalario() + "€ y su número de telefono es " +  trabajador.getTelefono());
+    }
+
+ 
+
+}
+//Creo la clase persona con las variables edad, nombre y teléfono.
+class Persona {
+    int edad;
+    String nombre;
+    int telefono;
+
+    public Persona(int edad, String nombre, int telefono) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    
+}
+
+//Creo la clase cliente que hereda de Persona y tiene de variable propia crédito.
+class Cliente extends Persona{
+    int credito;
+
+    public Cliente(int credito, int edad, String nombre, int telefono) {
+        super(edad, nombre, telefono);
+        this.credito = credito;
+    }
+
+    public int getCredito() {
+        return credito;
+    }
+    
+
+    public void setCredito(int credito) {
+        this.credito = credito;
+    }
+    
+}
+
+//Creo la clase Trabajador que hereda de Persona y tiene de variable propia salario.
+class Trabajador extends Persona{
+    int salario;
+
+    public Trabajador(int salario, int edad, String nombre, int telefono) {
+        super(edad, nombre, telefono);
+        this.salario = salario;
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+    
+}
